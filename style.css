@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn+SC:wght@400;600;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*,
+*:after,
+*:before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  width: 90vw;
+  min-width: 80vmin;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px 0;
+  box-shadow: 0 0 20px 2px #d0d0d0;
+  margin: 20px auto;
+  display: grid;
+  place-items: center;
+  margin: auto;
+  position: relative
+}
+.container > .head {
+  color: #0E0143;
+  text-align: center;
+  z-index: 0;
+  width: 100%;
+  display: grid;
+  place-items: center
+}
+h1 {
+  background-color: #fff;
+  width: fit-content;
+  padding: 0 10px;
+  color: #011C17
+}
+.container > .head:after,
+.container > .head:before{
+  content: '';
+  width: 33%;
+  position: absolute;
+  height: 2px;
+  background-color: #011C17;
+  left: 0%;
+  margin: 17px auto;
+  z-index: -1
+}
+.container > .head:after {
+  left: 67%;
+}
+.feature-box {
+  width: 90%;
+  min-width: 350px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 70px;
+}
+
+.box {
+  width: 210px;
+  height: 210px;
+  transform: rotate(10deg);
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  background-color: #90099A0A;
+  margin-bottom: 50px;
+  transition: transform .2s linear;
+}
+
+.box:after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #2600579C;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+.box:hover {
+  transform: rotate(0deg);
+}
+.box:hover > :where(ion-icon, .title, .desc) {
+  transform: rotate(0deg);
+  left: 0;
+}
+.box :where(ion-icon, .title, .desc) {
+  transition: transform .5s linear,
+    left .4s linear;
+}
+ion-icon {
+  font-size: 95px;
+  width: 95px;
+  height: 95px;
+  color: #90099A;
+  --ionicon-stroke-width: 26px;
+  transform: rotate(-10deg);
+  position: relative;
+  left: -8px;
+}
+
+
+.title {
+  transform: rotate(-10deg);
+  font-weight: 800;
+  font-size: 27px;
+  position: relative;
+  left: 8px;
+  color: #27003C;
+}
+.desc {
+  transform: rotate(-10deg);
+  text-align: center;
+  font-weight: 500;
+  font-size: 12px;
+  padding: 2px 20px;
+  position: relative;
+  left: 14px;
+  color: #27003CDB;
+}
+
+.bx-2  {
+  background-color: #03AA6E24
+}
+.bx-2 > ion-icon {
+  color: #09817D;
+}
+.bx-2 > .title {
+  color: #003A38
+}
+.bx-2 > .desc {
+  color: #003230C7;
+}
+
+.bx-3  {
+  background-color: #B7410036
+}
+.bx-3 > ion-icon {
+  color: #E25304;
+}
+.bx-3 > .title {
+  color: #631900
+}
+.bx-3 > .desc {
+  color: #631900A1;
+}
